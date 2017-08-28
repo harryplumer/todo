@@ -5,11 +5,23 @@
     <%= f.label :name %>
     <%= f.text_field :name, placeholder: "Item Name", required: true %>
   </div>
+
+  <div>
+    <%= f.label :description %>
+    <%= f.text_area :description, placeholder: "Description" %>
+  </div>
+
+   <div>
+    <%= f.label :high_priority %>
+    <%= f.check_box :high_priority%>
+  </div>
   
   <div>
     <%= f.label :completed %>
     <%= f.check_box :completed%>
   </div>
+
+
 
   <%= f.submit %>
 <% end %>

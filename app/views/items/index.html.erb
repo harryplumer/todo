@@ -2,13 +2,18 @@
 <div>
   <table>
     <thead>
-      <tr><th>Item</th><th>Completed</th><th></th><th></th></tr>
+      <tr><th>Item</th><th>Completed</th><th>Priority</th><th></th><th></th></tr>
     </thead>
     <tbody>  
       <% @items.each do |item| %>
         <tr>
           <td><%= item.name%></td>
           <% if item.completed === true%>
+            <td>Yes</td>
+          <% else %>
+            <td>No</td>
+          <% end %>
+          <% if item.high_priority === true%>
             <td>Yes</td>
           <% else %>
             <td>No</td>

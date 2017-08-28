@@ -1,8 +1,19 @@
 <h1><%= @item.name %></h1>
 <h5><i>Created: <%= @item.created_at %></i></h5>
+<strong>Description: </strong><br>
+<p><%= @item.description %>
 <h3>
   <strong>Completed: 
   <% if @item.completed === true%>
+    Yes
+  <% else %>
+    No
+  <% end %>
+  </strong>
+</h3>
+<h3>
+  <strong>High Priority? 
+  <% if @item.high_priority === true%>
     Yes
   <% else %>
     No

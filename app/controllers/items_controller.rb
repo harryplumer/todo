@@ -41,6 +41,6 @@ class ItemsController < ApplicationController
 
   private
     def item_params
-      params.require(:item).permit(:name, :completed)
+      params.require(:item).permit(:name, :completed, :high_priority, :description)
     end      
 end
