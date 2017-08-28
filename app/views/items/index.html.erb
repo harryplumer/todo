@@ -1,0 +1,23 @@
+<h1>Welcome To The To-Do List!</h1>
+<div>
+  <table>
+    <thead>
+      <tr><th>Item</th><th>Completed</th><th></th><th></th></tr>
+    </thead>
+    <tbody>  
+      <% @items.each do |item| %>
+        <tr>
+          <td><%= item.name%></td>
+          <% if item.completed === true%>
+            <td>Yes</td>
+          <% else %>
+            <td>No</td>
+          <% end %>
+          <td><%= link_to 'More Detail', item_path(item) %></td>
+          <td><%= link_to 'Delete', item_path(item), method: :delete %>
+        </tr>
+      <% end %>  
+    </tbody>
+  </table>
+  <%= link_to 'Add New Item', new_item_path %>
+</div>

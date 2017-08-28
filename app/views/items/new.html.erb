@@ -1,0 +1,14 @@
+<h1>Create New Todo Item</h1>
+<%= form_for @item do |f| %>
+  <div>
+    <%= f.label :name %>
+    <%= f.text_field :name, placeholder: "Item Name", required: true %>
+  </div>
+  
+  <div>
+    <%= f.label :completed %>
+    <%= f.check_box :completed%>
+  </div>
+
+  <%= f.submit %>
+<% end %>

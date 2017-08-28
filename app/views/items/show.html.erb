@@ -1,0 +1,15 @@
+<h1><%= @item.name %></h1>
+<h5><i>Created: <%= @item.created_at %></i></h5>
+<h3>
+  <strong>Completed: 
+  <% if @item.completed === true%>
+    Yes
+  <% else %>
+    No
+  <% end %>
+  </strong>
+</h3>
+<%= link_to 'Home', items_path %>
+<%= link_to 'Edit', edit_item_path(@item) %>
+<%= link_to 'Delete', item_path(@item), method: :delete %>
+
