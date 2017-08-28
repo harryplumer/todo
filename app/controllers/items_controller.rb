@@ -39,6 +39,14 @@ class ItemsController < ApplicationController
     end
   end
 
+  def home
+    @items = Item.all 
+  end
+
+  def completed 
+    @items = Item.where(completed: true)
+  end
+
   private
     def item_params
       params.require(:item).permit(:name, :completed, :high_priority, :description)

@@ -1,5 +1,6 @@
-<h1>Welcome, User!</h1>
- <table>
+<h1>Completed Items</h1>
+<div>
+  <table>
     <thead>
       <tr><th>Item</th><th>Completed</th><th>Priority</th><th></th><th></th></tr>
     </thead>
@@ -23,5 +24,6 @@
       <% end %>  
     </tbody>
   </table>
-<h2><%= link_to 'Show Full To Do List', items_path %></h2>
-<h2><%= link_to 'Show Completed Items', items_completed_path %></h2>
+  <%= link_to 'Show Full List', items_path %>
+  <%= link_to 'Add New Item', new_item_path %>
+</div>
